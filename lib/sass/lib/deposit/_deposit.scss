@@ -1,0 +1,178 @@
+@import 'stripe';
+@import 'paypal';
+
+#deposit {
+	fieldset { margin-top: 3em;
+		&:disabled, &.disabled { opacity: .3; pointer-events: none; }
+	}
+
+	.uk-form fieldset:first-child { margin-top: 0; }
+
+	#deposit {
+		// .uk-flex { flex-wrap: wrap; }
+		// .label { display: flex; justify-content: flex-start; align-items: center; white-space: nowrap; }
+	}
+
+	.field {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: stretch;
+		margin-right: 1rem;
+
+		.input-number { flex-grow: 0; }
+	}
+
+	#nbCardsEstimates { font-size: .8rem; line-height: 1; }
+
+	.input-number {
+
+		&-field {
+			width: 100%;
+			min-width: 160px;
+			height: 65px;
+
+			font-family: 'nexa', Trebuchet MS, Georgia, Times, serif;
+			font-size: 55px;
+			font-weight: 700;
+			color: $second;
+
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		&-step {
+			width: 35px;
+			font-size: 1.25rem;
+			line-height: 32px;
+		}
+
+	}
+
+	.quick-selection {
+		display: flex;
+		align-items: stretch;
+		flex-wrap: nowrap;
+
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		overflow: hidden;
+
+		border: {
+			width: 0 1px 1px 1px;
+			style: solid;
+			color: #ddd;
+		};
+
+
+		&-btn {
+			background-color: white;
+			border: 0 none;
+			padding: .5rem;
+
+			flex-basis: 100%;
+
+			cursor: pointer;
+
+			transition: background-color .2s ease;
+
+			&:not( :first-of-type ) { border-left: 1px solid #ddd; }
+			&:hover, &:active, &:focus { background-color: #eee; }
+			&:disabled { cursor: not-allowed; }
+		}
+	}
+
+	table.stats {
+		border-bottom: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+		line-height: 1;
+		font-weight: 700;
+
+		td {
+			border-top: 1px solid #ddd;
+			border-left: 1px solid #ddd;
+			width: 33%;
+			position: relative;
+			vertical-align: middle;
+			padding: 10px;
+
+			&:nth-child(odd) { background-color: $lightgray; }
+			&.total { background-color: $second; }
+
+			big {
+				font-family: 'nexa', Trebuchet MS, Georgia, Times, serif;
+				font-size: 55px;
+				float: left;
+				display: inline-block;
+				color: $second;
+			}
+
+			big ~ span {
+				font-size: 22px;
+				display: inline-block;
+				float: left;
+				padding: 4px 0 0 8px;
+
+				small, span { display: block; }
+				small { font-size: 14px; color: $second; }
+				.prix { font-size: 12px; margin-top: 3px; }
+				.creditValue{ font-size: 10px; font-style: italic; margin-top: 3px; }
+				.taux { font-size: 10px; color: $gray; }
+			}
+
+			/*span.number {
+				font-size: 76px;
+				color: $blue;
+				display: inline-block;
+				margin-right: 15px;
+				float: left;
+
+				big { font-size: 76px; }
+				small {
+					font-size: 0.3em;
+					vertical-align: top;
+					padding: 12px 0 0 3px;
+					display: inline-block;
+				}
+			}*/
+
+			div.check {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 50%;
+				right: 15px;
+				transform: translate( 0, -50% );
+
+				input[type="radio"] { display: none; }
+				label {
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+					border: 1px solid #ddd;
+					text-indent: 50px;
+					overflow: hidden;
+					white-space: nowrap;
+					padding: 0;
+					cursor: pointer;
+				}
+
+				input[type="radio"]:checked ~ label {
+					background: white url(../../images/check.png) center center no-repeat;
+				}
+			}
+
+			span.text {
+				font-size: 18px;
+				letter-spacing: 2px;
+				display: inline-block;
+				float: left;
+				margin-top: 20px;
+			}
+
+			&.total {
+				big, small, .prix, .taux { color: white; }
+			}
+		}
+	}
+
+}

@@ -1,0 +1,197 @@
+
+.icon-arrow{
+	background: url('../../images/fleche.png') no-repeat ;
+	width: 24px;
+	height: 24px;
+	margin-right: 15px;
+}
+
+.icon-makeadraw{
+	background: url('../../images/caller/tile-caller.png') no-repeat -28px -22px;
+	width: 21px;
+	height: 24px;
+	display: inline-block;
+	margin-left: 5px;
+	&:disabled {
+		color:lightgray;
+		border-color:lightgray;
+	}
+}
+
+.icon-restart{
+	background: url('../../images/caller/tile-caller.png') no-repeat -29px 0;
+	width: 19px;
+	height: 19px;
+	display: inline-block;
+	margin-right: 5px;
+
+}
+
+.icon-close-the-game{
+	background: url('../../images/caller/tile-caller.png') no-repeat 0 0;
+	width: 19px;
+	height: 19px;
+	display: inline-block;
+	margin-right: 5px;
+
+
+}
+
+.icon-external-window{
+	background: url('../../images/caller/tile-caller.png') no-repeat 0 -27px;
+	width: 19px;
+	height: 15px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.icon-map{
+	background: url('../../images/mappuce.png') right no-repeat !important;
+	height: 35px!important;
+	display:inline-flex;
+	vertical-align:middle;
+}
+
+.invoice_margin{
+	margin-left:2%;
+}
+
+.deposit_field{
+	width:200px;
+	margin-left:5px;
+}
+
+.icon-caller-play-reverse{
+	background: url('../../images/tile-reversed.png') no-repeat -11px -8px;
+	width: 38px;
+	height: 30px;
+	display: inline-block;
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+.icon-caller-add-reverse{
+	background: url('../../images/tile-reversed.png') no-repeat -10px -43px;
+	width: 35px;
+	height: 31px;
+	display: inline-block;
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+.icon-card-reverse{
+	background: url('../../images/tile-reversed.png') no-repeat -70px -7px;
+	width: 36px;
+	height: 30px;
+	display: inline-block;
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+.icon-make-card-reverse{
+	background: url('../../images/tile-reversed.png') no-repeat -119px -6px;
+	width: 45px;
+	height: 30px;
+	display: inline-block;
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+.icon-gear-credit{
+	background: white url(../../images/credit.png) left center no-repeat;
+    width: 38px;
+	height: 40px;
+	display: inline-block;
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+.icon-make-card-add-reverse{
+	background: url('../../images/tile-reversed.png') no-repeat -123px -40px;
+	width: 41px;
+	height: 30px;
+	display: inline-block;
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+.icon-simulation-reverse{
+	background: url('../../images/tile-reversed.png') no-repeat -172px -6px;
+	width: 36px;
+	height: 32px;
+	display: inline-block;
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+.icon-simulation-view-reverse{
+	background: url('../../images/tile-reversed.png') no-repeat -173px -42px;
+	width: 35px;
+	height: 28px;
+	display: inline-block;
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+.icon-caller-play{
+	background: url('../../images/project-list/tile.png') no-repeat -11px -8px;
+	width: 38px;
+	height: 30px;
+	display: inline-block;
+}
+
+.icon-caller-add{
+	background: url('../../images/project-list/tile.png') no-repeat -10px -43px;
+	width: 35px;
+	height: 31px;
+	display: inline-block;
+}
+
+.icon-card{
+	background: url('../../images/project-list/tile.png') no-repeat -70px -7px;
+	width: 36px;
+	height: 30px;
+	display: inline-block;
+}
+
+.icon-make-card{
+	background: url('../../images/project-list/tile.png') no-repeat -119px -6px;
+	width: 45px;
+	height: 30px;
+	display: inline-block;
+}
+
+.icon-make-card-add{
+	background: url('../../images/project-list/tile.png') no-repeat -123px -40px;
+	width: 41px;
+	height: 30px;
+	display: inline-block;
+}
+
+.icon-simulation{
+	background: url('../../images/project-list/tile.png') no-repeat -172px -6px;
+	width: 36px;
+	height: 32px;
+	display: inline-block;
+}
+
+.icon-simulation-view{
+	background: url('../../images/project-list/tile.png') no-repeat -173px -42px;
+	width: 35px;
+	height: 28px;
+	display: inline-block;
+}
+
+.icon-code-add {
+	background: url('../../images/project-list/tile.png') no-repeat -229px -6px;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+}
+
+.icon-code-view {
+	background: url('../../images/project-list/tile.png') no-repeat -229px -41px;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+}

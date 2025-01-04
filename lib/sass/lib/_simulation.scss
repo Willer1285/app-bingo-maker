@@ -1,0 +1,259 @@
+#cPlaylist {
+	.stats {
+		background-color: $lightgray;
+
+		position: sticky;
+		top: -1px;
+		left: 0;
+		right: 0;
+		z-index: 50;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		flex-wrap: wrap;
+
+		line-height: 1;
+
+		border-bottom: 1px solid $border-gray;
+
+		.winning-ways-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: stretch;
+			flex-wrap: wrap;
+
+			flex-basis: 100%;
+			flex-shrink: 0;
+		}
+
+		.stat {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			width: 33.33%;
+
+			padding: .5rem;
+
+			font-weight: 700;
+			box-sizing: border-box;
+
+			&.empty-space { padding: 0; }
+
+			&:not( .total ) { border-left: 1px solid $border-gray;
+				.label { display: none; }
+			}
+			.number { padding-right: .5rem; font-size: 1.4rem; color: $second; }
+		}
+
+		.total { background-color: $second; color: $white; flex-basis: 100%;
+			.text { font-size: .8rem; }
+			.number { color: inherit; display: inline-flex; align-items: flex-start; }
+			small { font-size: .5em; }
+		}
+
+		.winning-ways-type-div {
+			.winning-way { margin: 0; min-width: 0; }
+			&.small .winning-way-svg { width: 30px; height: 36px; }
+
+			.winning-way-inner { display: inline-flex; align-items: center; justify-content: flex-start;
+				.label { margin-left: .5rem; text-align: left; }
+			}
+		}
+
+		@media ( min-width: 600px ) {
+			.stat:not( .total ) {
+				.label { display: inherit; }
+			}
+		}
+
+		@media ( min-width: 900px ) {
+			.winning-ways-wrapper { flex-basis: 85.71%; }
+			.stat { width: 16.66%; }
+			.total { flex-basis: 14.29%; }
+		}
+
+		@media ( min-width: 1250px ) {
+			.stat {
+				&.total .text { font-size: 1rem; }
+				.number { font-size: 3rem; }
+			}
+
+			.winning-ways-type-div.small .winning-way-svg { width: 42px; height: 50px; }
+		}
+
+	}
+
+	.uk-form-row-submit {
+		.uk-tooltip { left: 220px !important; }
+	}
+}
+
+body.en {
+	#playlistValues .previewTitle { bottom: 174px; }
+	#winningCards .previewTitle { bottom: 0; }
+
+	@media ( min-width: 600px ) {
+		#playlistValues .previewTitle { bottom: auto; top: 0; }
+		#winningCards .previewTitle { bottom: auto; top: 184px; }
+	}
+}
+
+body.fr {
+	#playlistValues .previewTitle { bottom: 185px; }
+	#winningCards .previewTitle { bottom: 0; }
+
+	@media ( min-width: 600px ) {
+		#playlistValues .previewTitle { bottom: auto; top: 0; }
+		#winningCards .previewTitle { bottom: auto; top: 187px; }
+	}
+}
+
+body.es {
+	#playlistValues .previewTitle { bottom: 195px; }
+	#winningCards .previewTitle { bottom: 0; }
+
+	@media ( min-width: 600px ) {
+		#playlistValues .previewTitle { bottom: auto; top: 0; }
+		#winningCards .previewTitle { bottom: auto; top: 186px; }
+	}
+}
+
+body.hi {
+	#playlistValues .previewTitle { bottom: 160px; }
+	#winningCards .previewTitle { bottom: 0; }
+
+	@media ( min-width: 600px ) {
+		#playlistValues .previewTitle { bottom: auto; top: 0; }
+		#winningCards .previewTitle { bottom: auto; top: 176px; }
+	}
+}
+
+// Boite docked
+.docked-panel {
+	background-color: $secondTransparent;
+	width: 300px;
+	height: 60%;
+
+	position: fixed;
+	bottom: 15px;
+	z-index: 60;
+
+	color: white;
+	// transform: translate( 0, -50% );
+
+	&.closed {
+		z-index: 55;
+		i::before { content: '\f053'; }
+	}
+
+	&-right { right: 0; transition: right .25s ease;
+		// & > div { padding-left: 50px; padding-right: 1em; }
+		.previewTitle { left: -43px; border-radius: 10px 0 0 10px; }
+		&.closed { right: -300px; }
+	}
+
+	&-left { left: 0; transition: left .25s ease;
+		// & > div { padding-right: 50px; padding-left: 1em; }
+		.previewTitle { right: -43px; }
+		.text span { transform: rotate( 180deg ); }
+		&.closed { left: -300px; }
+	}
+
+	& > div {
+		height: 100%;
+		position: relative;
+		padding: 1rem 1.5rem;
+		box-sizing: border-box;
+	}
+
+	.previewTitle {
+		background-color: $secondTransparent;
+		width: 43px;
+		// height: 100%;
+
+		font-size: 19px;
+		text-align: center;
+		// text-transform: uppercase;
+
+		position: absolute;
+
+		margin: 0;
+		padding: 1rem 0;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		overflow: hidden;
+		cursor: pointer;
+
+		box-sizing: border-box;
+
+		transition: background-color .4s ease;
+
+		&:hover { background-color: darken( $secondTransparent, 5% ); }
+
+		.text {
+			white-space: nowrap;
+			margin: 1rem auto 0;
+			> span { writing-mode: vertical-rl; }
+		}
+	}
+
+	.scroll {
+		height: 92%;
+		overflow-y: scroll;
+	}
+
+	// Style de la liste de lecture
+	#playlist .uk-grid { margin-top: 0 !important; margin-left: 0 !important; }
+
+	.tPlaylist {
+		margin-bottom: 5px;
+
+		thead tr th {
+			padding: 8px 8px 5px;
+			// border-top: 1px solid white;
+			border-bottom: 1px solid white;
+			text-transform: uppercase;
+		}
+
+		div.oPlaylist > div { border-bottom: 0 none; padding: 4px 8px 2px; }
+		div.oPlaylist { line-height: 1; }
+
+		.handle i { font-size: 13px; cursor: all-scroll; cursor: ns-resize; }
+		.delete i { font-size: 13px; cursor: pointer; }
+
+		.handle i:hover, .delete i:hover { color: darken( $blue, 10% ); }
+
+		.placeholder {
+			width: 100%;
+			height: 25px;
+			position: relative;
+			border: 1px dashed white;
+
+			&:before { position: absolute; }
+		}
+
+		.dragged {
+			position: absolute;
+			opacity: 0.9;
+			z-index: 2000;
+			border: 1px dashed white;
+		}
+	}
+
+	@media ( min-width: 600px ) {
+		bottom: auto;
+		top: 30%;
+	}
+
+}
+
+#winningCards {
+	.tableHeader tr { vertical-align: top; }
+	.row { border-bottom: 1px solid rgba( #ddd, .4 ); padding: .25rem 0; }
+	.winning-way span { display: block; }
+}

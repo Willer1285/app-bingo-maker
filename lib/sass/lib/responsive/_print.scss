@@ -1,0 +1,11 @@
+@media print {
+	.hidetoprinter, .hide-to-printer {
+		display: none !important;
+	}
+
+	.show-to-printer {
+		display: block !important;
+	}
+
+	.app-header { display: none !important; }
+}

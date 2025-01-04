@@ -1,0 +1,145 @@
+/* Mainmenu */
+.app-header {
+	background-color: $blue;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	.header-inner {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	* { box-sizing: border-box; }
+	.app-menu { flex-grow: 1; }
+
+	.app-logo {
+		.logo { display: block; }
+	}
+}
+
+.app-menu {
+	display: flex;
+	justify-content: flex-end;
+	align-items: stretch;
+	flex-basis: 100%;
+
+	font-size: .9rem;
+	color: $white;
+	line-height: 1;
+
+	.app-menu-col {
+		list-style-type: none;
+		padding: 0; margin: 0 .5rem;
+
+		&:last-child { margin-left: 0;margin-right: 0; }
+
+		li { height: 100%; }
+	}
+
+	.menu-item { position: relative;
+		&:hover, &:focus, &:active {
+			.menu-link-lvl-1 { text-decoration: none; border-color: $orange; color: $orange; }
+			svg { fill: $orange; }
+		}
+	}
+
+	.menu-link-lvl-1 {
+		height: 100%;
+
+		color: inherit;
+		padding: .5rem 1rem;
+		border: 1px solid rgba( $white, .7 );
+
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+
+		border-radius: 3px;
+
+		transition: border-color .2s ease, color .2s ease;
+	}
+
+	.btn-free-game {
+		a { font-size: .9rem; }
+
+		.icon {
+			margin-right: .5rem;
+
+			svg { height: 30px; width: auto; }
+		}
+	}
+
+	.burger-menu {
+		.uk-dropdown-scrollable { max-height: 65vh; z-index: 199; }
+	}
+
+	// .credit-menu { margin-left: auto; }
+	.credit-wrapper {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		font-size: .9rem;
+		color: $black;
+
+		.credit {
+			font-weight: bold;
+		}
+
+		.credit-link {
+			background: $white url('../../images/credit.png') 10px center no-repeat;
+			background-size: 24px 24px;
+			height: 100%;
+
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			color: inherit;
+			padding-left: 40px;
+			padding-right: 1rem;
+
+			border-radius: 3px;
+
+			transition: background-color .2s ease;
+
+			&:hover, &:focus, &:active {
+				background-color: $second;
+				color: $white;
+
+				text-decoration: none;
+			}
+
+		}
+	}
+
+	.main-menu, .free-game-menu { display: none; }
+
+	@media( min-width: 400px ) {
+		.credit-menu { margin-left: auto; }
+	}
+
+	@media( min-width: 600px ) {
+		.app-menu-col { margin: 0 1.5rem; }
+		.free-game-menu { display: block; margin-right: auto; }
+		.menu-free-game { display: none; }
+	}
+
+	@media( min-width: 800px ) {
+		justify-content: space-between;
+		font-size: 1.1rem;
+
+		.force-center { margin-left: auto; margin-right: auto; }
+
+		.menu-projects, .menu-active-game, .collapsed-pages-divider { display: none; }
+
+		.main-menu { display: flex; align-items: stretch;
+			.menu-item:not( :first-child ) { margin-left: 1rem; }
+		}
+		.credit-menu { margin-left: 1.5rem; }
+		.credit-wrapper { font-size: 1.4rem; }
+		.credit-link { background-size: 36px 36px; padding-left: 55px; }
+	}
+
+}

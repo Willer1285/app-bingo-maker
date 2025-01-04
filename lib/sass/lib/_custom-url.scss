@@ -1,0 +1,40 @@
+#customURL {
+	.uk-form-label { width: auto; }
+	.uk-form-label-full { width: auto; }
+
+	.result-msg {
+		font-size: .85em;
+		font-weight: bold;
+		opacity: 0;
+
+		transition: opacity .35s ease, color .35s ease;
+
+		&.error {
+			color: $red;
+			opacity: 1;
+		}
+
+		&.success {
+			color: $winGreen;
+			opacity: 1;
+		}
+	}
+
+	#alias {
+		font-weight: bold;
+
+		transition: border-color .35s ease, background-color .35s ease, color .35s ease;
+
+		&.error {
+			border-color: $red;
+			background-color: lighten( $red, 35% );
+			color: $red;
+		}
+
+		&.success {
+			border-color: $winGreen;
+			background-color: lighten( $winGreen, 15% );
+			color: darken( $winGreen, 5% );
+		}
+	}
+}

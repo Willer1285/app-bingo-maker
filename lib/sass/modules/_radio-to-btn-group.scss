@@ -1,0 +1,44 @@
+.radio-to-btn-group {
+
+	$radio-unchecked: #f5f5f5;
+	$radio-checked: $lightblue;
+
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-start;
+	box-sizing: border-box;
+
+	input[type="radio"] { display: none; margin: 0; }
+
+	span {
+		background-color: $radio-unchecked;
+		border: {
+			style: solid;
+			color: darken( $radio-unchecked, 5% );
+		};
+
+		display: block;
+		padding: .4rem 1rem;
+		margin: 0;
+
+		transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+
+		&:not( :checked ) {
+			&:hover, &:active, &:focus { border-color: darken( $radio-unchecked, 15% ); }
+		}
+	}
+
+	label {
+		margin: 0;
+		display: block;
+
+		border-width: 1px 0;
+		cursor: pointer;
+
+		&:first-of-type span { border-radius: 5px 0 0 5px; border-width: 1px 0 1px 1px; }
+		&:last-of-type span { border-radius:  0 5px 5px 0; border-width: 1px 1px 1px 0; }
+	}
+
+	input[type="radio"] + span { margin-left: 0; }
+	input[type="radio"]:checked + span { background-color: $radio-checked; color: $white; border-color: $radio-checked; }
+}

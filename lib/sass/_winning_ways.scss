@@ -1,0 +1,288 @@
+.winning-ways-form-els {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: .5rem;
+
+	.unselect-all-winning-ways { margin-right: auto; }
+}
+
+.winning-ways-type-form {
+	color: $black;
+
+
+	.svg-container {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		max-height: 350px;
+		overflow-y: scroll;
+
+		padding-bottom: 80px;
+	}
+
+	.svg-symbol {
+		display: none;
+	}
+
+	// .winning-way { flex-basis: 23%; }
+
+	.label {
+		margin-top: .5em;
+		font-size: .9em;
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	.scroll-indicator {
+		background: $white;
+		background: linear-gradient( 180deg, rgba( $white, 0 ) 0%, rgba( $white, 1 ) 50% );
+	}
+
+	&.bg-white {
+		width: 100%;
+
+		.svg-container {
+			padding: 1em 0;
+			background-color: $white;
+
+			color: $black;
+
+			justify-content: center;
+		}
+
+		.scroll-indicator {
+			background: $lightblue;
+			background: linear-gradient( 180deg, rgba( $white, 0 ) 0%, rgba( $lightblue, 1 ) 60% );
+
+			color: $white;
+		}
+	}
+
+	&.small {
+		box-sizing: border-box;
+
+		.svg-container { padding-bottom: 80px; gap: .5rem; /*max-height: 175px;*/ }
+
+		.scroll-indicator .scroll-text { max-width: 7rem; }
+
+		.winning-way { flex-basis: 30%; }
+
+		// .label { display: none; }
+
+		.winning-way-svg { height: 50px; }
+	}
+
+	.winning-way {
+		margin: 5px 0;
+		flex-basis: 23%;
+
+		.winning-way-inner {
+			background-color: $lightgray;
+			height: 100%;
+
+			border: 1px solid $gray;
+			border-radius: 10px;
+
+			display: block;
+
+			padding: .5em .3em;
+			text-align: center;
+
+			box-sizing: border-box;
+
+			transition: background-color .2s, color .2s, opacity .2s;
+		}
+
+		.waytowin:checked + .winning-way-inner {
+			background-color: $lightblue;
+			color: $white;
+			opacity: 1;
+		}
+
+		.waytowin:disabled + .winning-way-inner {
+			opacity: .5;
+		}
+	}
+}
+
+.winning-ways-type-div {
+	width: 100%;
+
+	&.winning-ways-columns-6 .winning-way { flex-basis: 16%; }
+	&.winning-ways-columns-5 .winning-way { flex-basis: 19%; }
+	&.winning-ways-columns-4 .winning-way { flex-basis: 24%; }
+	&.winning-ways-columns-3 .winning-way { flex-basis: 32%; }
+	&.winning-ways-columns-2 .winning-way { flex-basis: 49%; }
+
+	.svg-container {
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.winning-way {
+		margin: 5px auto;
+		text-align: center;
+		box-sizing: border-box;
+		line-height: 1;
+
+		min-width: 45px;
+	}
+
+	.label { margin-top: .5em; font-size: 11px; }
+
+	&.small {
+		.winning-way-svg { width: 42px; height: 50px; }
+	}
+
+	&.center-ways {
+		.svg-container { justify-content: center; }
+	}
+
+	/*&.mini {
+		.winning-way-svg { width: 42px; height: 50px; }
+	}*/
+}
+
+.scroll-indicator {
+	height: 80px;
+	margin-top: -80px;
+
+	position: relative;
+	z-index: 5;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+
+	.scroll-icon {
+		background-color: $white;
+
+		width: 30px;
+		height: 50px;
+		border: 2px solid $blue;
+		border-radius: 25px;
+		position: relative;
+
+		&::before {
+			content: '';
+
+			background: $blue;
+			width: 8px;
+			height: 8px;
+
+			position: absolute;
+			top: 8px;
+			left: 50%;
+
+			margin-left: -4px;
+
+			border-radius: 100%;
+
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+			animation-name: scroll;
+		}
+	}
+
+	.scroll-text {
+		max-width: 10rem;
+
+		position: relative;
+		margin-left: 1em;
+		top: -15px;
+
+		font-size: .9em;
+		font-weight: 700;
+		line-height: 1;
+	}
+}
+
+@keyframes scroll {
+	0% {  opacity: 1 }
+	100% { opacity: 0; transform: translateY( 26px ); }
+}
+
+.winning-way-svg {
+	width: 75px;
+	height: 90px;
+
+	&.b1 { --b1-display: block; }
+	&.b2 { --b2-display: block; }
+	&.b3 { --b3-display: block; }
+	&.b4 { --b4-display: block; }
+	&.b5 { --b5-display: block; }
+	&.i1 { --i1-display: block; }
+	&.i2 { --i2-display: block; }
+	&.i3 { --i3-display: block; }
+	&.i4 { --i4-display: block; }
+	&.i5 { --i5-display: block; }
+	&.n1 { --n1-display: block; }
+	&.n2 { --n2-display: block; }
+	&.n3 { --n3-display: block; }
+	&.n4 { --n4-display: block; }
+	&.n5 { --n5-display: block; }
+	&.g1 { --g1-display: block; }
+	&.g2 { --g2-display: block; }
+	&.g3 { --g3-display: block; }
+	&.g4 { --g4-display: block; }
+	&.g5 { --g5-display: block; }
+	&.o1 { --o1-display: block; }
+	&.o2 { --o2-display: block; }
+	&.o3 { --o3-display: block; }
+	&.o4 { --o4-display: block; }
+	&.o5 { --o5-display: block; }
+}
+
+// Cas spécial pour le drapeau américain
+.usa_flag .winning-way-svg {
+	// Bleu
+	&.b1 { --b1-color: #3c3b6e; }
+	&.b2 { --b2-color: #3c3b6e; }
+	&.i1 { --i1-color: #3c3b6e; }
+	&.i2 { --i2-color: #3c3b6e; }
+
+	// Rouge
+	&.n1 { --n1-color: #b22234; }
+	&.g1 { --g1-color: #b22234; }
+	&.o1 { --o1-color: #b22234; }
+
+	&.b3 { --b3-color: #b22234; }
+	&.i3 { --i3-color: #b22234; }
+	&.n3 { --n3-color: #b22234; }
+	&.g3 { --g3-color: #b22234; }
+	&.o3 { --o3-color: #b22234; }
+
+	&.b5 { --b5-color: #b22234; }
+	&.i5 { --i5-color: #b22234; }
+	&.n5 { --n5-color: #b22234; }
+	&.g5 { --g5-color: #b22234; }
+	&.o5 { --o5-color: #b22234; }
+}
+
+@media ( max-width: 649px ) {
+	.winning-ways-type-form.small {
+		.svg-container { max-height: 250px; }
+	}
+}
+
+@media ( min-width: 650px ) {
+	.winning-ways-type-form {
+		.svg-container { justify-content: flex-start; }
+		.winning-way { flex-basis: 15%; margin: 5px; }
+
+		&.small .winning-way { flex-basis: 14%; }
+	}
+}
+
+@media ( min-width: 1000px ) {
+	.winning-ways-type-form {
+		.winning-way { flex-basis: 13%; }
+
+		&.small .winning-way { flex-basis: 14%; }
+	}
+}

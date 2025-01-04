@@ -1,0 +1,24 @@
+@mixin flex-container($height){
+	display: flex !important;
+	flex-direction: row;
+	flex-flow: row wrap;
+	flex-wrap: wrap;
+	display: -webkit-flex; /* Safari */
+	-webkit-flex-wrap: wrap; /* Safari 6.1+ */
+	@if($height == true){
+		min-height: 68px;
+	}
+}
+
+
+@mixin flex-tile($minWidth, $buttonSection){
+
+	align-self: auto;
+	@if($buttonSection == true){
+		margin-top: 10px;
+		margin-bottom: 10px;
+	} @else {
+		min-width: $minWidth;
+		flex: 1 1 auto;
+	}
+}

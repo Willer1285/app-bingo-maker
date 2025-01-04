@@ -1,0 +1,96 @@
+#free_caller_window {
+	.uk-container {
+		width: auto;
+		max-width: 90%;
+	}
+}
+
+#caller.windowMode {
+	margin: 1em 2em;
+
+	.pickContainer .pick .value{
+		margin-top:unset!important;
+		font-size:1.9em!important;
+	}
+
+	.number-mode{
+
+		.header{
+			// min-height: 10vh;
+			// margin-bottom: 1vh !important;
+
+		}
+
+		.bigletter{
+			height: 74px!important;
+			width: 74px!important;
+			min-width: 74px!important;
+			line-height: 74px!important;
+			font-size: 1.4em!important;
+		}
+
+		.bigtitle{
+			font-size: 0.7em!important;
+		}
+
+		.footer{
+			height: 2vh!important;
+		}
+
+		.uk-overflow-container{
+			width:100%;
+		}
+
+		table{
+			display: table;
+			align-items: center;
+			// height: 78vh;
+		}
+
+		th{
+			// height: 15vh!important;
+			line-height: 1;
+			padding: 2vh 10px!important;
+			position: sticky;
+			left: 0;
+		}
+
+		html {
+			font: inherit;
+		}
+		span, div, p, table {
+			font-size: 1.5vw !important; /* or... use percentage unit => 150% */
+		}
+
+		#caller .pickContainer .pick .letter {
+			font-size: 0.5em !important;
+		}
+
+		#drawTable th {
+			border-top: 0px white !important;
+			font-size: 1.6em !important;
+		}
+
+		#drawTable td {
+			font-size: 3.5vw;
+		}
+
+		#caller .pickContainer .title {
+			font-size: 0.6em !important;
+		}
+
+		#drawTable td.active .current-active {
+			min-width: 55%;
+    		height: 43%;
+			// display: inline;
+			line-height:normal;
+		}
+
+	}
+}
+
+@media ( min-width: 1500px ) {
+	#caller.windowMode .number-mode{
+		span, div, p, table { font-size: 1.5rem !important; }
+	}
+}

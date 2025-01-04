@@ -1,0 +1,15 @@
+#initiate-payment {
+	.button-row-paypal { max-width: 450px; }
+}
+
+.paypal {
+	background: url(../../images/paypal.png) left top no-repeat;
+	width: 145px;
+	height: 63px;
+	cursor: pointer;
+	text-indent: 145px;
+	overflow: hidden;
+	border: 0 none;
+}
+
+#paypal:disabled { opacity: 0.4; cursor: default; }
