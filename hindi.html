@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr" class="">
+
+	<head>
+				<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no">
+
+		<link rel="icon" href="favicon.ico" sizes="any">		<link rel="icon" href="images/favicon/icon.svg" type="image/png">
+		<link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+		<link rel="manifest" href="images/favicon/manifest.webmanifest.html">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		
+		<title>कॉलम हेडर्स - Bingo Maker</title>
+
+		<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+
+		
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/uikit.almost-flat.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/components/autocomplete.almost-flat.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/components/datepicker.almost-flat.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/components/tooltip.almost-flat.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/components/form-password.almost-flat.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/components/form-select.almost-flat.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/components/form-file.almost-flat.min.css">
+
+		<link rel="stylesheet" href="lib/css/custom.css@v=1734375663.css">
+
+		
+		
+		
+	</head>
+
+	<body id="home" class="hi login-page">
+
+
+			<div id="container">
+				<div class="bgtop english">
+
+			<div class="uk-container uk-container-center uk-text-center">
+				<header>
+					<div id="logo">
+						<a href="https://www.bingomaker.com/hi"><img src="images/logo-couleur-noel.svg" alt="Bingo Maker"></a>
+					</div>
+					<div id="lang" class="marge-left">
+						<ul class="uk-navbar-nav">
+							<li class="uk-parent" data-uk-dropdown>
+								<a><i class="uk-icon-globe"></i> हिंदी <i class="uk-icon-caret-down"></i></a>
+								<div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom" aria-hidden="true">
+									<ul class="uk-navbar-nav">
+										<li><a href="user/signout.html">English</a></li><li><a href="french.html">Français</a></li><li><a href="spanish.html">Español</a></li>									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</header>
+
+				<div id="main">
+
+					<div class="intro-area block-bg mobile-hide">
+						<div class="title">
+							<h1>बिंगो मेकर में आपका स्वागत है</h1>
+							<hr>
+						</div>
+
+						
+						<div class="content">
+							<p>   एक बार आपका अकाउंट बन जाने के बाद, आपको सभी फीचर्स को आज़माने के लिए 2 क्रेडिट्स प्राप्त होंगे और अधिकतम 25 खिलाड़ियों के लिए बिंगो गेम की मेजबानी की जाएगी।</p>						</div>
+					</div>
+
+					<div class="forms-area uk-flex uk-flex-space-between">
+						<div class="login-container form-container block-bg uk-text-left">
+							<h2>कॉलम हेडर्स</h2>
+							<hr class="uk-article-diviser">
+
+							<div class="fbconnect uk-vertical-align-middle">
+																<a href="https://graph.facebook.com/v2.8/oauth/authorize?client_id=380198105479665&redirect_uri=https://app.bingomaker.com/user/login&scope=email" id="fblogin">Facebook से लॉग इन करें</a>
+							</div>
+
+							<div class="or">या</div>
+
+							<div class="loginform">
+								<form action="https://app.bingomaker.com/user/login" id="loginform" name="login" class="uk-form" method="post">
+									<div class="uk-form-row">
+										<div class="label-effect">
+											<label>
+												<span class="label-text">ईमेल</span>
+																								<input type="email" name="email" id="login-email" value="" class="small-mobile large-input">
+											</label>
+										</div>
+									</div>
+									<div class="uk-form-row">
+										<div class="label-effect">
+											<label>
+												<span class="label-text">पासवर्ड</span>
+												<input type="password" name="password" id="login-password" value="" maxlength="256" class="small-mobile">
+											</label>
+										</div>
+									</div>
+									<div class="uk-form-row">
+										<input type="hidden" name="csrf_tk_bingomaker" value="39b1a8d8cb0b7c5dcea922465c258aaa" />
+										<input type="submit" name="login" id="loginBtn" value="कॉलम हेडर्स" class="uk-button uk-button-large uk-button-primary">
+																				<a href="user/forgotpassword.html">पासवर्ड भूल गए</a>
+									</div>
+								</form>
+							</div>
+
+							<div id="loginMessage" class="login-msg uk-alert uk-alert-danger hide"></div>
+						</div>
+
+						
+						<div class="subscribe-container form-container  block-bg standard-connect uk-text-left">
+							<h2>साइन अप करें</h2>
+							<hr class="uk-article-diviser">
+
+							<form action="https://app.bingomaker.com/user/signup" name="signup" method="post" id="editProfile" class="uk-form">
+								<div class="uk-form-row">
+									<div class="label-effect">
+										<label>
+											<span class="label-text">ईमेल</span>
+											<input type="email" name="email" id="register-email" maxlength="50" value="" class="required validMail small-mobile large-input">
+										</label>
+									</div>
+								</div>
+
+								<div class="uk-form-row">
+									<div class="label-effect">
+										<label>
+											<span class="label-text">यूजरनाम</span>
+											<input type="text" name="name" id="register-name" maxlength="50" value="" class="required small-mobile large-input">
+										<label>
+									</div>
+								</div>
+
+								<div class="uk-form-row fhp">
+									<div class="label-effect">
+										<label>
+											<span class="label-text">यूजरनाम</span>
+											<input type="text" name="phone" id="register-phone" maxlength="50" value="" class="small-mobile">
+										</label>
+									</div>
+								</div>
+
+								<div class="uk-form-row">
+									<div class="label-effect">
+										<label>
+											<span class="label-text">पासवर्ड</span>
+											<input type="password" name="password" id="password" maxlength="256" value="" class="validPassword small-mobile">
+										</label>
+									</div>
+								</div>
+
+								<div class="uk-form-row brmobile">
+									<div class="label-effect">
+										<label>
+											<span class="label-text">पुष्टि करें</span>
+											<input type="password" name="validpassword" id="confirmPassword" maxlength="256" value="" class="small-mobile">
+										</label>
+									</div>
+								</div>
+
+								<div class="uk-form-row">
+									<input type="hidden" name="csrf_tk_bingomaker" value="39b1a8d8cb0b7c5dcea922465c258aaa" />
+									<input type="button" value="साइन अप करें" class="uk-button uk-button-large uk-button-primary validation">
+								</div>
+								<div id="tooltip" class="uk-tooltip uk-tooltip-right tip-error" style="display: none;"><div class="uk-tooltip-inner"></div></div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="bgbottom">
+			<div class="bg"></div>
+			<div class="uk-container uk-container-center">
+				<div class="screenshot">
+					<ul>
+						<li>
+														<img src="images/screenshot-create-hi.jpg" alt="आपके कस्टम कार्ड्स बनाएं">
+						</li>
+						<li>
+														<img src="images/screenshot-design-hi.jpg" alt="आपके कार्ड्स का डिज़ाइन बनाएं">
+						</li>
+						<li>
+														<img src="images/screenshot-caller-hi.jpg" alt="बिंगो कॉलर के साथ एक गेम खेलें">
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<p class="uk-text-center terms">* इस वेब एप्लिकेशन का उपयोग करते समय, आप नियमों और शर्तों को स्वीकार करते हैं<a href="https://www.bingomaker.com/hi/terms-privacy/">शर्तें और गोपनीयता</a>.</p>
+		</div>
+
+	</div>
+
+	<div id="textContainer" class="hide"
+		data-error-five-hundred="कृपया गुप्त या निजी विंडो का उपयोग करें।"
+	></div>
+							<div class="footer uk-text-center uk-text-small hidetoprinter">
+					&copy; 2025 सभी अधिकार रिजर्व किए गए है, <a target="_blank" href="https://www.BingoMaker.com/hi">Bingo Maker<sup>&circledR;</sup></a>
+			</div>
+
+			
+			<div id="loading"><div>लोड हो रहा है...</div></div>
+			<div id="overlay" class="hide"></div>
+			<div id="fb-root"></div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		<script>
+			var rootURL = "https://app.bingomaker.com/";
+			var csrf_token = "39b1a8d8cb0b7c5dcea922465c258aaa";
+			var isDev = false;
+			var site_lang = 'hi';
+			var stripe_key = 'pk_live_51IMIFqG4rYH2fSml66BuXCSRTJJetWqvWtl6GxyPIfiSNFTCXn1FUBVte3rjUsWFjvQpHPsOIBKY2cJzvEgxhH6X003lKGsr9K';
+			var currentBalance = parseInt( 0 );
+		</script>
+
+				<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+		
+				<script src="lib/js/scripts.min.js@ver=1734375663" defer></script>
+		
+		<!-- Latest Sortable -->
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "https://connect.facebook.net/fr_CA/all.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId: '380198105479665',
+					status	: true,
+					cookie	: true,
+					xfbml	: true,
+					oauth	: true
+				});
+			};
+		</script>
+	</body>
+</html>

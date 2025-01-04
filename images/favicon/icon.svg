@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon</title>
+    <defs>
+        <radialGradient cx="50%" cy="49.8316002%" fx="50%" fy="49.8316002%" r="50.4814173%" gradientTransform="translate(0.500000,0.498316),scale(0.990463,1.000000),translate(-0.500000,-0.498316)" id="radialGradient-1">
+            <stop stop-color="#FF9D00" offset="0%"></stop>
+            <stop stop-color="#FFCB00" offset="3%"></stop>
+            <stop stop-color="#FF9D00" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill-rule="nonzero">
+            <g>
+                <ellipse id="Oval" fill="#1D1D1B" cx="63.6103969" cy="64" rx="63.6103969" ry="63"></ellipse>
+                <ellipse id="Oval" fill="url(#radialGradient-1)" cx="63.6103969" cy="64" rx="61.5444382" ry="60.9575182"></ellipse>
+                <circle id="Oval" fill="#FFFFFF" cx="54.1492454" cy="58.2833985" r="33.3253214"></circle>
+                <path d="M75.9357183,120.884293 C77.1095584,114.815539 67.4488541,107.807714 54.313583,105.248742 C41.1783119,102.689771 29.5807714,105.530464 28.3951928,111.599217 C28.2750089,112.375689 28.2435041,113.163308 28.3012856,113.946898 C38.372834,121.295137 50.8272778,124.980995 64.2560089,124.980995 C67.5072593,124.979082 70.753266,124.72003 73.9636669,124.20626 C74.9666631,123.344436 75.6594005,122.177503 75.9357183,120.884293 L75.9357183,120.884293 Z" id="Path" fill="#FF6400"></path>
+                <path d="M62.4248183,14.1470095 C71.5455562,12.902739 79.3281163,9.88596982 83.6830632,6.30575741 C68.0199012,1.04098583 50.9107264,2.18019106 36.0838457,9.47512577 C40.0514254,13.5366126 50.5455562,15.7786473 62.4248183,14.1470095 Z" id="Path" fill="#FF6400"></path>
+                <ellipse id="Oval" fill="#FF6400" cx="113.134712" cy="62.9200671" rx="11.1984349" ry="26.5170486"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>
